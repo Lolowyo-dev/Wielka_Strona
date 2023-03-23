@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-:root:has(body[data-bs-theme="dark"]){
+body[data-bs-theme="dark"]{
     --bg-color: 44, 51, 51;
     --bg-dark: 46, 69, 69;
     --light-bg-color: 14, 131, 136;
@@ -8,7 +8,7 @@
     --transition-params: all 0.3s ease 0s;
 }
 
-:root:has(body[data-bs-theme="light"]){
+body[data-bs-theme="light"]{
     --bg-color: 214, 231, 236;
     --bg-dark: 14, 131, 136;
     --light-bg-color: 14, 131, 136;
