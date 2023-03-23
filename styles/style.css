@@ -336,3 +336,7 @@ footer>section:nth-child(3)>div>a>i::before{
 [data-bs-theme=dark] .btn-close{
     filter: none !important;
 }
+
+form input{
+    background:rgba(162, 164, 164, 0.6);
+}
