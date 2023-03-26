@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/0166bb6a5e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/style.css">
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/form.js"></script>
   </head>
   <body data-bs-theme="dark">
         <header>
@@ -27,13 +28,13 @@
                         Galeria
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="GaleriaPsy.html">Psy</a></li>
+                      <li><a class="dropdown-item" href="../Gallery/GaleriaPsy.html">Psy</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item"  href="GaleriaKoty.html">Koty</a></li>
+                      <li><a class="dropdown-item"  href="../Gallery/GaleriaKoty.html">Koty</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="GaleriaWensze.html">Węże</a></li>
+                      <li><a class="dropdown-item" href="../Gallery/GaleriaWensze.html">Węże</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="GaleriaŻółwie.html">Żółwie</a></li>
+                      <li><a class="dropdown-item" href="../Gallery/GaleriaŻółwie.html">Żółwie</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
@@ -53,27 +54,27 @@
         </header>
 
         <main style="padding: 0 20vw;">
-            <form class="row g-3">
+            <form class="row g-3 was-validated" action="submit.html">
                 <div class="col-md-6">
-                  <label for="inputEmail4" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4">
+                  <label for="inputEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="inputEmail" required>
                 </div>
                 <div class="col-md-6">
-                  <label for="inputPassword4" class="form-label">Imie i Nazwisko</label>
-                  <input type="text" class="form-control" id="inputPassword4">
+                  <label for="inputuser" class="form-label">Imie i Nazwisko</label>
+                  <input type="text" class="form-control" id="inputUser" required>
                 </div>
                 <div class="col-12">
-                  <label for="inputAddress" class="form-label">Adress</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Ulica główna">
+                  <label for="inputAddress" class="form-label">Adres</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Ulica główna" required>
                 </div>
                 <div class="col-md-6">
                   <label for="inputCity" class="form-label">Miasto</label>
-                  <input type="text" class="form-control" id="inputCity">
+                  <input type="text" class="form-control" id="inputCity" required>
                 </div>
                 <div class="col-md-4">
-                  <label for="inputState" class="form-label">Województwo</label>
-                  <select id="inputState" class="form-select">
-                    <option selected>Wybierz...</option>
+                  <label for="inputProvince" class="form-label">Województwo</label>
+                  <select id="inputProvince" class="form-select" required aria-label="select example">
+                    <option selected disabled value="">Wybierz...</option>
                     <option>dolnośląskie</option>
                     <option>kujawsko-pomorskie</option>
                     <option>lubelskie</option>
@@ -94,18 +95,25 @@
                 </div>
                 <div class="col-md-2">
                   <label for="inputZip" class="form-label">Zip</label>
-                  <input type="text" class="form-control" id="inputZip">
+                  <input type="text" class="form-control" id="inputZip" required>
+                </div>
+                <div class="mb-3">
+                  <label for="inputMessage" class="form-label">Wiadomość</label>
+                  <textarea style="overflow: hidden;" class="form-control is-invalid" id="inputMessage" placeholder="Tekst" rows="5" required></textarea>
+                  <div class="invalid-feedback">
+                    Napisz do nas wiadomość
+                  </div>
                 </div>
                 <div class="col-12">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <input class="form-check-input" type="checkbox" id="gridCheck" required>
                     <label class="form-check-label" for="gridCheck">
                       Akceptuje regulamin
                     </label>
                   </div>
                 </div>
                 <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Zapisz się</button>
+                  <button type="submit" class="btn btn-primary" onsubmit="collect_data()">Wyślij</button>
                 </div>
               </form>
         </main>

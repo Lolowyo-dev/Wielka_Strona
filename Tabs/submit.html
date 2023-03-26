@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wielka Strona</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0166bb6a5e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/form.js"></script>
+    <style>
+        
+        @keyframes back {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+        #powrot{
+            position: fixed;
+            top: 0;
+            right: 0;
+            margin: 1em 1.5em;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: transparent;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	        background-size: 400% 400%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition: all 1s ease-in-out;
+        }
+
+
+        #powrot:hover{
+            animation: back 1s forwards;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            background-clip: text;
+            font-size: 2em;
+            text-shadow: 0 0 0.1em #23a6d5;
+            -webkit-background-clip: text;
+        }
+
+        #powrot:hover>a>i{
+            animation: spin 1s forwards;
+        }
+
+        a{
+            text-decoration: none;
+            color: transparent;
+        }
+
+        main{
+            display: flex;
+            font-size: 2em;
+            align-items: center;
+        }
+
+        main img{
+            height: 4em;
+            width: auto;
+        }
+
+    </style>
+  </head>
+  <body data-bs-theme="dark">
+
+    <div id="powrot"><a href="../index.html">Powrót <i class="fa-solid fa-arrow-right"></i></a></div>
+
+    <main id="submit_content">
+        Właśnie przesłałeś nam swoje dane <img src="https://cdn.discordapp.com/emojis/934635143166062622.webp?size=128&quality=lossless" alt=":)">
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
