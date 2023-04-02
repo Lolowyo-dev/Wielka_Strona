@@ -6,6 +6,7 @@ function save_data() {
     data.name = names[0];
     data.surname = names[1];
     data.adress = document.getElementById('inputAddress').value;
+    data.tel = document.getElementById('inputTel').value;
     data.city = document.getElementById('inputCity').value;
     data.province = document.getElementById('inputProvince').value;
     data.zip = document.getElementById('inputZip').value;

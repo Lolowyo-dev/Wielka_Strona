@@ -12,7 +12,7 @@ body[data-bs-theme="light"]{
     --bg-color: 214, 231, 236;
     --bg-dark: 14, 131, 136;
     --light-bg-color: 14, 131, 136;
-    --text-color: 190, 197, 239;
+    --text-color: 105, 20, 55;
     --transition-params: all 0.3s ease 0s;
 }
 
@@ -142,8 +142,14 @@ min-height: calc(100vh - 56px);
 flex-wrap: wrap;
 align-content: center;
 justify-content: center;
-padding: 3rem 5rem 5rem 5rem;
+padding: 5rem 15vw;
 gap: 4vw;
+}
+
+@media (max-width: 992px){
+    main{
+        padding: 10% 5%;
+    }
 }
 
 .card{
@@ -315,7 +321,7 @@ footer>section:nth-child(3)>div>a>i::before{
     object-fit: cover;
     border-radius: 50%;
     transform: scale(75%);
-    filter: blur(0.2rem) grayscale(0.5);
+    filter: blur(0.15rem) grayscale(0.5);
     transition: var(--transition-params);
     border: 1rem solid rgb(var(--bs-tertiary-bg-rgb));
 }
@@ -339,4 +345,62 @@ footer>section:nth-child(3)>div>a>i::before{
 
 .form-control, .form-select{
     color: #000;
+}
+
+.harmon-box{
+    background-color:   var(--bs-dark-bg-subtle);
+    text-align: center;
+    padding: 10px;
+    border-radius: 2rem;
+    width: 25em;
+}
+
+.harmon-title{
+    background-color: rgba(var(--bg-color),0.5);
+    transition: var(--transition-params);
+    border-radius: 5rem;
+    padding: 10px;
+}
+
+.harmon-title:hover{
+    cursor: pointer;
+    background-color: rgb(var(--bg-color));
+}
+
+.harmon-content{
+    display: none;
+    padding: 2rem;
+}
+
+.btn-hide{
+    display: none;
+}
+
+.harmon-box img{
+    width: 75%;
+    aspect-ratio: 1/1;
+    height: auto;
+    object-fit: cover;
+    margin: 1rem auto 2rem auto;
+}
+
+#nasz-zespol{
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#nasz-zespol>.harmon-box{
+margin: 1vw;
+}
+
+#nasz-zespol>h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2em;
+    font-size: 3em;
+    font-weight: bold;
 }
