@@ -253,7 +253,7 @@ footer>section:nth-child(1) img:hover{
 }
 
 footer>section:nth-child(2){
-    font-size: 12px;
+    font-size: 0.7rem;
     font-style: italic;
     color: var(--bs-primary-text);
     flex: 1;
@@ -403,4 +403,60 @@ margin: 1vw;
     margin-bottom: 2em;
     font-size: 3em;
     font-weight: bold;
+}
+
+nav .btn{
+    margin: auto 0.2rem;
+}
+
+@keyframes right-to-left {
+from{transform: scaleX(50%) scale(0);}
+to{transform: scaleX(100%) scale(1);}
+}
+
+.settings-wrapper{
+    position: absolute;
+    overflow: hidden;
+    transform: scale(0);
+    transition: all var(--transition-params);
+}
+
+.settings-wrapper>*{
+    margin: 6px;
+    border-radius: 2rem;
+    border: #a2a4a4 1px solid;
+}
+
+.settings-wrapper{
+    padding: 8px 4px;
+    margin-right: 2rem;
+    border-radius: 1rem;
+    border: #a2a4a4 1px solid;
+    text-align: center;
+}
+
+.settings-toggler{
+    cursor: pointer;
+    user-select: none;
+}
+
+.settings-container:hover .settings-wrapper{
+    animation: right-to-left 150ms forwards;
+}
+.settings-container .settings-toggler{
+    height: 100%;
+}
+
+.settings-container .settings-toggler::after
+{
+    transition: var(--transition-params);
+}
+
+.settings-container:hover .settings-toggler::after{
+    transition: var(--transition-params);
+    transform: rotate(0.5turn);
+}
+
+.settings-container{
+    margin-right: 2rem;
 }
